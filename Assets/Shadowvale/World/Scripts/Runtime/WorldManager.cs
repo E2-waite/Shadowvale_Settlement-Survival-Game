@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using Shadowvale.World.Data;
 using Shadowvale.World.Generation;
+using Shadowvale.Resource.Rendering;
 
 namespace Shadowvale.World.Runtime
 {
@@ -12,10 +13,10 @@ namespace Shadowvale.World.Runtime
     public class WorldManager : MonoBehaviour
     {
         public WorldSystem System { get; private set; }
-        public ChunkBuilder Chunks { get; private set; }
-        public TileBuilder Tiles { get; private set; }
-        public ResourceBuilder Resources { get; private set; }
         public WorldData Data { get; private set; }
+        public TerrainBuilder TerrainBuilder { get; private set; }
+        public TileBuilder TileBuilder { get; private set; }
+        public ResourceBuilder ResourceBuilder { get; private set; }
         public WorldProperties Properties => properties;
         [SerializeField] private WorldProperties properties;
         [SerializeField] private Chunk chunkPrefab;
@@ -25,16 +26,28 @@ namespace Shadowvale.World.Runtime
             Clear();
             properties?.Init();
             System = new WorldSystem(this);
-            Chunks = new ChunkBuilder(this);
-            Resources = new ResourceBuilder(this);
-            Tiles = new TileBuilder(this);
+            TerrainBuilder = new TerrainBuilder(this);
+            TileBuilder = new TileBuilder(this);
+            ResourceBuilder = new ResourceBuilder(this);
             Data = new WorldData();
 
             for (int x = 0; x < properties.worldSize.x; x++)
             {
                 for (int y = 0; y < properties.worldSize.y; y++)
                 {
-                    Chunks.Generate(new Vector2Int(x, y));
+                    TerrainBuilder.Generate(new Vector2Int(x, y));
+                }
+            }
+        }
+
+        public void Update()
+        {
+            if (System != null && System.ActiveChunks != null)
+            {
+                foreach (Vector2Int position in System.ActiveChunks)
+                {
+                    Data.Chunks.TryGetValue(position, out Chunk chunk);
+                    ResourceRenderer.Render(chunk.Data.Resources);
                 }
             }
         }

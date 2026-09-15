@@ -43,6 +43,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c2c30e9e31af2d43b3d7a703043e468, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.World.Runtime.WorldManager
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.World.Runtime.WorldManager
   chunkPrefab: {fileID: 4987144300308045478, guid: 8d767cba519a4eb4aa5df97f4af5bf9e, type: 3}
   properties: {fileID: 11400000, guid: c443d905959792a458ffff45b2cfd711, type: 2}

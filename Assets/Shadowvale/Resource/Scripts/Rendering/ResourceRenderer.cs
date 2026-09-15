@@ -2,15 +2,16 @@ using Shadowvale.World.Data;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Shadowvale.Resource.Data;
 
-namespace Shadowvale.World.Rendering
+namespace Shadowvale.Resource.Rendering
 {
     public static class ResourceRenderer
     {
         private const int MAX_BATCH = 1023;
         private static Matrix4x4[] batchBuffer = new Matrix4x4[MAX_BATCH];
 
-        public static void Render(ChunkResources resources)
+        public static void Render(ChunkResourceData resources)
         {
             List<int> ids = resources.ids;
             if (ids.Count == 0) return;

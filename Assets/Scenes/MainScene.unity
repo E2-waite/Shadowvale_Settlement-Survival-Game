@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aba09ccb11ac0854798bed6480583343, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Gameplay.Agents.Agent
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Gameplay.Agents.Agent
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cb651b79bd8ddf4a84d7527c18cb54c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Gameplay.Agents.Player
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Gameplay.Agents.Player
   health:
     current: 0
     max: 100
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec7ced8e565d9f541b208483fce4fd60, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Gameplay.Agents.PlayerController
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Gameplay.Agents.PlayerController
   moveSpeed: 3
 --- !u!114 &1377924894
 MonoBehaviour:
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1732ca51f63f99409445221acda9045, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Pathfinding.Runtime.PathfindingManager
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Pathfinding.Runtime.PathfindingManager
 --- !u!114 &2099301565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cea2012e0fed1f4cb754f75dafb4e3f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Core.InputManager
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Core.InputManager
 --- !u!114 &2099301566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1a712d072f7ee34bb425b09cddb568a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Gameplay.GameManager
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Gameplay.GameManager
   world: {fileID: 2107095133}
   input: {fileID: 2099301565}
   interaction: {fileID: 2099301568}
@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 469255e9d539e12458f0e69c6fee4a9b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Command.Runtime.CommandManager
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Command.Runtime.CommandManager
   commandCatalog: {fileID: 11400000, guid: 605ea60f016acaa4782562827d73a997, type: 2}
   commandWidget: {fileID: 2230963341494873201}
 --- !u!114 &2107095133 stripped
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c2c30e9e31af2d43b3d7a703043e468, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.World.Runtime.WorldManager
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.World.Runtime.WorldManager
 --- !u!114 &2230963341494873201 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3824618194715823972, guid: 1653f714e09d4564abdb19da353d1c27, type: 3}
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff2f1365f0d79941bba79c0670daa97, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Command.UI.CommandWidget
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Command.UI.CommandWidget
 --- !u!1001 &5041679767745460484
 PrefabInstance:
   m_ObjectHideFlags: 0

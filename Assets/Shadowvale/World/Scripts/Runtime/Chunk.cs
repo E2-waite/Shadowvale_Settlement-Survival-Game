@@ -1,5 +1,4 @@
 using UnityEngine;
-using Shadowvale.World.Rendering;
 using Shadowvale.World.Data;
 
 namespace Shadowvale.World.Runtime
@@ -25,14 +24,6 @@ namespace Shadowvale.World.Runtime
             MeshRenderer = GetComponent<MeshRenderer>();
             Collider = GetComponent<MeshCollider>();
             transform.position = new Vector3(worldPos.x, 0, worldPos.y);
-        }
-
-        private void Update()
-        {
-            if (Data == null || Data.Resources == null)
-                return;
-
-            ResourceRenderer.Render(Data.Resources);
         }
     }
 }

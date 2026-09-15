@@ -600,7 +600,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aba09ccb11ac0854798bed6480583343, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Gameplay.Agents.Agent
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Gameplay.Agents.Agent
   health:
     current: 0
     max: 100
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c26a7fe2896e5543a5808fa7c02689d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Gameplay.Agents.AgentStates
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Gameplay.Agents.AgentStates
 --- !u!114 &7142171365348350701
 MonoBehaviour:
   m_ObjectHideFlags: 0

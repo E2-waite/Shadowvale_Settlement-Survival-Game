@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Shadowvale.Resource.Data;
 
 namespace Shadowvale.World.Data
 {

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 594f4a788a14fd9449010ecc529317a0, type: 3}
   m_Name: Forest
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.WorldBuilder.Data.TileDefinition
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.WorldBuilder.Data.TileDefinition
   resourceTypes:
   - {fileID: 11400000, guid: 8d67c10e5787c8c45bbc4fd570d8f4df, type: 2}
   surfaceType: 2

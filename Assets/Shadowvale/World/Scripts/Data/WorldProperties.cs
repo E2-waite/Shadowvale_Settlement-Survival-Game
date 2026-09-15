@@ -8,7 +8,6 @@ namespace Shadowvale.World.Data
     public class WorldProperties : ScriptableObject
     {
         public List<TileConfig> tileTypes = new List<TileConfig>();
-        public ResourceConfig tree, stone;
         [Range(0.001f, .3f)] public float noiseScale = 0.05f;
         [Range(0.001f, .3f)] public float resourceScale = 0.05f;
         [Range(0.01f, 10f)] public float heightMultiplier = 2.5f;

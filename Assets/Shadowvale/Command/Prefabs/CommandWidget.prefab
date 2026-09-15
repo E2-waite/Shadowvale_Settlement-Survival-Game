@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ff2f1365f0d79941bba79c0670daa97, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Command.UI.CommandWidget
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Command.UI.CommandWidget
   slotPrefab: {fileID: 4672358577318730786, guid: 98c5e055cb1991b40a212158dc3f4222, type: 3}
   defaultSelector: {fileID: 21300000, guid: dfbd9e72dd394e94f82972c61b2bb257, type: 3}
   snappedSelector: {fileID: 21300000, guid: 6f36012dc700f26488d3f17edc6f1cc9, type: 3}

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a91c93c498396c4fa69cc9aced1fae2, type: 3}
   m_Name: Player
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.SpriteSytem.Data.SpriteConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.SpriteSytem.Data.SpriteConfig
   layerObjects:
   - rid: 4503306546498764865
   - rid: 4503306546498764864
@@ -29,7 +29,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 1370292934614712384
-      type: {class: Layer, ns: Cinderwild.SpriteSytem.Data, asm: Assembly-CSharp}
+      type: {class: Layer, ns: Shadowvale.SpriteSytem.Data, asm: Assembly-CSharp}
       data:
         name: Torso Outline
         visible: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
           - sprite: {fileID: -466546037, guid: 338a4eb891024d140ab53ea37538e48f, type: 3}
           - sprite: {fileID: -177272644, guid: 338a4eb891024d140ab53ea37538e48f, type: 3}
     - rid: 1370292934614712385
-      type: {class: Layer, ns: Cinderwild.SpriteSytem.Data, asm: Assembly-CSharp}
+      type: {class: Layer, ns: Shadowvale.SpriteSytem.Data, asm: Assembly-CSharp}
       data:
         name: Head Outline
         visible: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
           - sprite: {fileID: -466546037, guid: 65bfd10d488ed264a981f927944915b2, type: 3}
           - sprite: {fileID: -177272644, guid: 65bfd10d488ed264a981f927944915b2, type: 3}
     - rid: 4503306546498764864
-      type: {class: Layer, ns: Cinderwild.SpriteSytem.Data, asm: Assembly-CSharp}
+      type: {class: Layer, ns: Shadowvale.SpriteSytem.Data, asm: Assembly-CSharp}
       data:
         name: Head
         visible: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
           - sprite: {fileID: -466546037, guid: 7d26b157f76dd8d4288d2c59c8a70799, type: 3}
           - sprite: {fileID: -177272644, guid: 7d26b157f76dd8d4288d2c59c8a70799, type: 3}
     - rid: 4503306546498764865
-      type: {class: Layer, ns: Cinderwild.SpriteSytem.Data, asm: Assembly-CSharp}
+      type: {class: Layer, ns: Shadowvale.SpriteSytem.Data, asm: Assembly-CSharp}
       data:
         name: Eyes
         visible: 1
@@ -105,7 +105,7 @@ MonoBehaviour:
           - sprite: {fileID: -466546037, guid: 459f8f3724ddab84392c5b85bb38cf93, type: 3}
           - sprite: {fileID: 0}
     - rid: 4503306546498764866
-      type: {class: Layer, ns: Cinderwild.SpriteSytem.Data, asm: Assembly-CSharp}
+      type: {class: Layer, ns: Shadowvale.SpriteSytem.Data, asm: Assembly-CSharp}
       data:
         name: Torso
         visible: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
           - sprite: {fileID: -466546037, guid: a6b67542a9bf4414d89c387f619fe118, type: 3}
           - sprite: {fileID: -177272644, guid: a6b67542a9bf4414d89c387f619fe118, type: 3}
     - rid: 4503306546498764867
-      type: {class: Layer, ns: Cinderwild.SpriteSytem.Data, asm: Assembly-CSharp}
+      type: {class: Layer, ns: Shadowvale.SpriteSytem.Data, asm: Assembly-CSharp}
       data:
         name: Trim
         visible: 1

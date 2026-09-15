@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4feda386ccb3eb74eaf90bad31fe69e4, type: 3}
   m_Name: Attack
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Command.Data.CommandOption
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Command.Data.CommandOption
   sprite: {fileID: 21300000, guid: 6996303601fb647438aba7cbf51e619d, type: 3}
   color: {r: 1, g: 0, b: 0, a: 1}
   commandType: 1

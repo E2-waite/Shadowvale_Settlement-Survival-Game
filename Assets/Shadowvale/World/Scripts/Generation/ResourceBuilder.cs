@@ -1,6 +1,7 @@
 using Shadowvale.World.Data;
 using Shadowvale.World.Runtime;
 using UnityEngine;
+using Shadowvale.Resource.Data;
 
 namespace Shadowvale.World.Generation
 {
@@ -15,8 +16,6 @@ namespace Shadowvale.World.Generation
 
         public void Build(ChunkData chunk)
         {
-            ChunkResources resources = new ChunkResources(chunk);
-
             int index = 0;
 
             for (int x = 0; x < chunk.Size; x++)
@@ -24,7 +23,7 @@ namespace Shadowvale.World.Generation
                 for (int z = 0; z < chunk.Size; z++)
                 {
                     // Offset by 1 to account for padding
-                    TileData tile = chunk.GetTile(x + 1, z + 1);
+                    TileData tile = chunk.Terrain.GetTile(x + 1, z + 1);
 
                     if (tile.Object.resourceTypes.Count == 0) continue;
 
@@ -43,10 +42,10 @@ namespace Shadowvale.World.Generation
 
                             if (config.sizes.Count > 0)
                             {
-                                ResourceNode node = new ResourceNode(config, tile, index, Random.Range(0, config.sizes.Count));
-                                resources.SetNode(index, node);
-                                resources.ids.Add(index);
-                                UpdateMatrix(resources, node, tile, index);
+                                ResourceNode node = new ResourceNode(config, index, Random.Range(0, config.sizes.Count));
+                                chunk.Resources.SetNode(index, node);
+                                chunk.Resources.ids.Add(index);
+                                UpdateMatrix(chunk.Resources, node, tile, index);
                                 index++;
                                 break;
                             }
@@ -54,11 +53,9 @@ namespace Shadowvale.World.Generation
                     }
                 }
             }
-
-            chunk.Resources = resources;
         }
 
-        private void UpdateMatrix(ChunkResources resources, ResourceNode node, TileData tile, int id)
+        private void UpdateMatrix(ChunkResourceData resources, ResourceNode node, TileData tile, int id)
         {
             ResourceConfig config = node.Config;
             if (config == null) return;

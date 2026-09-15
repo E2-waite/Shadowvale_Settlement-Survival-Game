@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eea7be43dc6888c469a34803461e9051, type: 3}
   m_Name: CommandCatalog
-  m_EditorClassIdentifier: Assembly-CSharp::Cinderwild.Command.Data.CommandOptionCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::Shadowvale.Command.Data.CommandOptionCatalog
   options:
   - {fileID: 11400000, guid: 5e36c6d4566ec3c4ab8fadd013982963, type: 2}

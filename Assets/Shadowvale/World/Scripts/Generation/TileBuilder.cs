@@ -26,7 +26,7 @@ namespace Shadowvale.World.Generation
                     Vector2Int tilePos = new Vector2Int(x, y);
                     TileData tile = BuildTile(chunk, tilePos);
 
-                    chunk.SetTile(tile, tilePos);
+                    chunk.Terrain.SetTile(tile, tilePos);
 
                     // Assign tiles to tile grid
                     if (x > 0 && y > 0 && x < chunkSize + 1 && y < chunkSize + 1)
@@ -50,14 +50,14 @@ namespace Shadowvale.World.Generation
             {
                 Vector2Int vPos = tile.VertexPosition(i);
 
-                if (vPos.x < 0 || vPos.y < 0 || vPos.x >= chunk.Noise.GetLength(0) || vPos.y >= chunk.Noise.GetLength(1))
+                if (vPos.x < 0 || vPos.y < 0 || vPos.x >= chunk.Terrain.Noise.GetLength(0) || vPos.y >= chunk.Terrain.Noise.GetLength(1))
                     continue;
 
-                tile.Noise[i] = chunk.Noise[vPos.x, vPos.y];
+                tile.Noise[i] = chunk.Terrain.Noise[vPos.x, vPos.y];
             }
 
             AssignObject(tile);
-            AssignVertices(tile, chunk.Vertices);
+            AssignVertices(tile, chunk.Terrain.Vertices);
 
             Vector3 chunkOffset = new Vector3(chunk.Position.x, 0, chunk.Position.y);
             // Offset by -1 to accound for padding
@@ -123,7 +123,7 @@ namespace Shadowvale.World.Generation
             {
                 for (int y = 1; y < world.Properties.chunkSize + 1; y++)
                 {
-                    TileData tile = chunk.GetTile(new Vector2Int(x, y));
+                    TileData tile = chunk.Terrain.GetTile(new Vector2Int(x, y));
                     if (tile == null || tile.Object == null || tile.Object.topoType != TopoType.Sloped && tile.Object.topoType != TopoType.Smooth) continue;
 
                     bool flat = true;
@@ -137,7 +137,7 @@ namespace Shadowvale.World.Generation
                             Vector2Int cornerI = Defs.corners[i];
                             Vector2Int otherPos = tile.Position + (cornerV - cornerI);
 
-                            TileData otherTile = chunk.GetTile(otherPos);
+                            TileData otherTile = chunk.Terrain.GetTile(otherPos);
                             if (otherTile == null || otherTile.Object == null) continue;
 
                             if (lowestObj == null || otherTile.Object.Index < lowestObj.Index)
@@ -170,7 +170,7 @@ namespace Shadowvale.World.Generation
             {
                 for (int y = 1; y < world.Properties.chunkSize + 1; y++)
                 {
-                    TileData tile = chunk.GetTile(new Vector2Int(x, y));
+                    TileData tile = chunk.Terrain.GetTile(new Vector2Int(x, y));
                     if (tile == null || tile.Object == null) continue;
 
                     if (tile.Object.topoType != TopoType.Stepped) // Skip non-stepped tiles
@@ -179,7 +179,7 @@ namespace Shadowvale.World.Generation
                     // First check adjacent tiles
                     foreach(Vector2Int dir in Defs.adjacent)
                     {
-                        TileData neighbor = chunk.GetTile(new Vector2Int(tile.Position.x + dir.x, tile.Position.y + dir.y));
+                        TileData neighbor = chunk.Terrain.GetTile(new Vector2Int(tile.Position.x + dir.x, tile.Position.y + dir.y));
 
                         if (neighbor == null) continue;
 
@@ -216,7 +216,7 @@ namespace Shadowvale.World.Generation
                         if (vertex == null) continue;
 
                         Vector2Int dir = Defs.diagonal[v];
-                        TileData neighbor = chunk.GetTile(new Vector2Int(tile.Position.x + dir.x, tile.Position.y + dir.y));
+                        TileData neighbor = chunk.Terrain.GetTile(new Vector2Int(tile.Position.x + dir.x, tile.Position.y + dir.y));
                         if (neighbor == null) continue;
 
                         if (neighbor.Object.Index < tile.Object.Index)
@@ -246,7 +246,7 @@ namespace Shadowvale.World.Generation
             {
                 for (int y = 1; y < world.Properties.chunkSize + 1; y++)
                 {
-                    TileData tile = chunk.GetTile(new Vector2Int(x, y));
+                    TileData tile = chunk.Terrain.GetTile(new Vector2Int(x, y));
                     if (tile == null || tile.Object == null) continue;
 
                     if (tile.Object.topoType != TopoType.Smooth)
@@ -255,7 +255,7 @@ namespace Shadowvale.World.Generation
                     for (int v = 0; v < 4; v++)
                     {
                         Vector2Int offsetPos = tile.Position + Defs.corners[v];
-                        float noise = chunk.Noise[offsetPos.x, offsetPos.y];
+                        float noise = chunk.Terrain.Noise[offsetPos.x, offsetPos.y];
                         float height = noise;
 
                         if (tile.Object.Prev != null)

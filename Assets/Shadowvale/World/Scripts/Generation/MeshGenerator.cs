@@ -66,7 +66,7 @@ namespace Shadowvale.World.Runtime
             {
                 for (int y = 1; y < size + 1; y++)
                 {
-                    TileData tile = chunk.Data.GetTile(new Vector2Int(x, y));
+                    TileData tile = chunk.Data.Terrain.GetTile(new Vector2Int(x, y));
 
                     if (tile == null || tile.Object == null) continue;
 
